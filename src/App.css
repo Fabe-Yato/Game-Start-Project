@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+   background: linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.70) 100%), url("src/assets/background-games.jpg");
+  }
+  nav{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding-left: 30px;
+     padding-top: 20px;
+  }
+  
+  nav h1{
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-left: 10px;
+  }
+  nav img{
+    width: 10%;
+    padding-left: 90px;
+  }
+  nav span{
+     color: rgb(211, 0, 0);
+  }
+  
+  nav .area-pesquisa{
+     display: flex;
+     align-items: center;
+     padding-left: 620px;
+  }
+  nav #pesquisa{
+     height: 30px;
+     width: 230px;
+  
+     border-radius: 10px;
+     outline: none;
+     border: none;
+  
+     padding-left: 5px;
+  }
+  
+  nav .lupa-pesquisa{
+     width: 45px;
+     padding-left: 10px;
+  }
+  
+  /* Jogos Principais */
+  
+  .jogos-principais{
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+  }
+  .jogos-principais .jogo-principal{
+      width: 55%;
+      height: 380px;
+      margin-top: 20px;
+      margin-left: 120px;
+  
+      border-radius: 15px;
+      border: 4px solid blue;
+  }
+  .navegacao-usuario{
+     width: 100%;
+     height: 300px;
+     background-color: #232020d5;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-top: 20px;
+     margin-left: 50px;
+  
+     border-radius: 20px;
+     border: 4px solid blue;
+  
+     
+  }
+  .dados-usuario{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+   margin-left: 100px;
+   
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  .dados-usuario-principal{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  
+     margin-left: 50px;
+  }
+  .dados-usuario-principal p{
+     font-size: 1.5rem;
+     color: white;
+  }
+  .dados-usuario-principal img{
+     margin: 0;
+     width: 50px;
+     height: 50px;
+     margin-left: 10px;
+  }
+  
+  .opcoes-navegacao {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 25px;
+  }
+  
+  .opcoes-navegacao a{
+     font-size: 1.4rem;
+     color: white;
+     text-decoration: none;
+  }
+  
+  .opcoes-navegacao img{
+     width: 40px;
+     height: 40px;
+     margin-left: 20px;
+  }
+  
+  .opcoes-navegacao .promocoes{
+   width: 35px;
+   height: 35px;
+   margin-left: 50px;
+  }
+  .opcoes-navegacao .carrinho{
+      width: 35px;
+      height: 35px;
+      margin-left: 70px;
+  }
+  
+  .opcoes-navegacao .configuracoes{
+     width: 30px;
+     height: 30px;
+     margin-left: px;
+  }
+  
+  .informacoes-jogo-principal{
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+  
+     margin-left: 130px;
+     margin-top: 20px;
+  }
+  .nome-preco-jogo-principal{
+     display: flex;
+     flex-direction: row;
+  }
+  
+  .avaliacao{
+     margin-left: 15px;
+  }
+  .estrelas{
+     width: 25px;
+     height: 25px;
+     margin-top: 5px;
+  }
+  
+  .sinopse{
+     font-size: 1.3rem;
+     width: 700px;
+     margin-top: 15px;
+  }
+
+  .jogos-em-alta{
+     display: flex;
+     flex-direction: row;
+     margin-top: 50px;
+
+     justify-content: space-evenly;
+
+     color: white;
+     font-size: 1.5rem;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 600;
+  }
+  
+  .jogos-em-alta img{
+     width: 280px;
+     border-radius: 20px;
+     border: 4px solid blue;
+     cursor: pointer;
+  }
+
+  .preco-plataforma{
+     display: flex;
+     flex-direction: row;
+  }
+  
+  .preco-plataforma img{
+      width: 30px;
+      height: 25px;
+      border: none;
+      margin-left: 10px;
+  }
+  
+  .promocoes-secao{
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      margin-top: 20px;
+  }
+  .promocoes-imagem img{
+      margin-top: 100px;
+      width: 800px;
+      height: 350px;
+      border-radius: 15px;
+      border: 4px solid blue;
+  }
+  .promocoes-textos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      background-color: rgba(0, 0, 0, 0.472);
+      border-radius: 15px;
+      position: absolute;
+      margin-top: 250px;
+  }
+
+  .promocoes-secao button{
+      margin-top: 10px;
+      background-color: blue;
+      width: 300px;
+      height: 50px;
+
+      border-radius: 20px;
+      border: 2px solid white;
+      color: white;
+      font-size: 1.5rem;
+
+      cursor: pointer;
+  }
+
+  .promocoes-secao button:hover{
+      background-color: rgb(1, 1, 155);
+      font-size: 1.6rem;
+  }
+
+  .genero-jogos{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 150px;
+      color: white;
+      font-size: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+   
+  }
+  .genero-jogos img{
+      width: 400px;
+      height: 200px;
+      opacity: 80%;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      cursor: pointer;
+  }
+  .genero-jogos p{
+      position: absolute;
+      margin-top: -90px;
+      margin-left: 10px;
+  }
+  .genero-secao h1{
+      color: white;
+      font-size: 2.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 150px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
