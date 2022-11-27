@@ -1,0 +1,57 @@
+.titulo-promocoes-jogos{
+    color: white;
+    font-size: 2.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px
+}
+
+.promocoes-jogos .titulo-promocoes{
+    color: white;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+.todos-terror{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.todos-terror img{
+    width: 350px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.todos-indie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.todos-indie img{
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.jogos{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.preco-jogos{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+    
+}
+.preco-jogos h3{
+    margin-left: 20px;
+    font-size: 2rem;
+    color: yellow;
+}
+

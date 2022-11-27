@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import PrincipalJogos from './components/PrincipalJogos'
-import Promocoes from "./components/Promocoes"
-import Generos from './components/Generos'
+import { useState, useEffect} from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Rotas from './routes/Rotas'
 
+
+
+function App() {
+ 
   return (
     <div className="App">
-      <Navbar/>
-      <PrincipalJogos/>
-      <Promocoes/>
-      <Generos/>
+       <Rotas/>
+
     </div>
   )
+    
+
 }
 
 export default App
