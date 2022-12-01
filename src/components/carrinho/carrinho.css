@@ -1,0 +1,87 @@
+.titulo-preco-total{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px
+}
+
+.preco-total{
+   padding-left: 450px;
+}
+.jogos-carrinho img{
+    width: 350px;
+    height: 280px;
+    border-radius: 15px;
+   
+}
+
+.informacoes-jogos-carrinho{ 
+    display: flex;
+    flex-direction: row; 
+    margin: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(49, 40, 40, 0.87);
+    border-radius: 15px;
+}
+
+.descricao-jogos-carrinho{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.descricao-jogos-carrinho h1{
+    font-size: 2.5rem;
+}
+
+.descricao-jogos-carrinho h2{
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+.descricao-jogos-carrinho h3{
+    width: 700px;
+    font-size: 1rem;
+    padding-bottom: 20px;
+}
+.informacoes-jogos-carrinho button{
+    width: 250px;
+    height: 50px;
+
+    background-color: blue;
+    color: white;
+
+    border: 2px solid white;
+    border-radius: 15px;
+
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.informacoes-jogos-carrinho button:hover{
+    background-color: white;
+    color: black;
+}
+.botao-span{
+    color: rgb(255, 0, 0);
+    font-size: 1.5rem;
+}
+
+.finalizar-compra button{
+    width: 250px;
+    height: 50px;
+
+    background-color: blue;
+    color: white;
+
+    border: 2px solid white;
+    border-radius: 15px;
+
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    margin-right: 50px;
+    float: right;
+}
+.finalizar-compra button:hover{
+    background-color: white;
+    color: black;
+}

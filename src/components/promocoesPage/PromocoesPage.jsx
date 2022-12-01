@@ -1,5 +1,5 @@
-import Navbar from "./Home/Navbar"
-import "../promocoes.css"
+import Navbar from "../Home/Navbar"
+import "./promocoes.css"
 
 const PromocoesPage = () => {
     return(

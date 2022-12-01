@@ -26,7 +26,7 @@ const PrincipalJogos = (props) => {
         .then(( response ) => {
             let jogos = response.data
             setJogos(jogos)  
-            setGodOfWar(jogos[8])
+            setGodOfWar(jogos[6])
             setTLOU2(jogos[1])
             setSpiderMan(jogos[2])
             setTEW(jogos[4])
@@ -35,11 +35,7 @@ const PrincipalJogos = (props) => {
         .catch(() => {
             console.log("Não funcionou")
         })
-   }, [])
-
-
-
-//    <PrincipalJogos/>
+    }, [])
     return(
         <main>
             <div className="jogos-principais">
@@ -54,11 +50,11 @@ const PrincipalJogos = (props) => {
                     </div>
                     <div className="navegacao-usuario">
                         <div className="opcoes-navegacao">
-                            <a href="#">Promoções</a>
+                            <a href="/promocoes">Promoções</a>
                             <img src={Promocoes} className="promocoes" alt="icone-promoções" />
                         </div>
                         <div className="opcoes-navegacao">
-                            <a href="#">Carrinho</a>
+                            <a href="/carrinho">Carrinho</a>
                             <img src={Carrinho} className= "carrinho" alt="icone-promoções" />
                         </div>    
                         <div className="opcoes-navegacao">

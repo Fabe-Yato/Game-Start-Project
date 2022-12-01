@@ -1,7 +1,7 @@
-import Navbar from "./Home/Navbar"
-import '../jogos.css'
-import Carrinho from '../assets/carrinho-de-compras.png'
-import Estrela from '../assets/estrela.png'
+import Navbar from "../Home/Navbar"
+import './jogos.css'
+import Carrinho from '../../assets/carrinho-de-compras.png'
+import Estrela from '../../assets/estrela.png'
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
@@ -9,11 +9,10 @@ import axios from "axios"
 
 const JogosPage = (props) => {
    const { nome } = useParams()
-
-   console.log(nome)
-
    const [jogos, setJogos] = useState("")
+   const [genero, setGenero] = useState("")
 
+   const[adicionado, setAdcionado] = useState("Carrinho")
    useEffect(() => {
             axios.get("https://gamepointstore.onrender.com/jogos")
             .then(( response ) => {
@@ -21,16 +20,20 @@ const JogosPage = (props) => {
 
                 const trocarDados = () => {
                     if(nome == "god-of-war"){
-                        setJogos(jogos[3]) 
+                        setJogos(jogos[6]) 
+                        setGenero("Ação")
                     }
                     else if(nome == "spiderman"){
                         setJogos(jogos[2])
+                        setGenero("Ação")
                     }
                     else if(nome == "red-dead-redemption"){
                         setJogos(jogos[4])
+                        setGenero("Ação")
                     }
                     else if(nome == "the-last-of-us"){
                         setJogos(jogos[1])
+                        setGenero("Terror")
                     }
                 }
                 trocarDados()
@@ -39,7 +42,25 @@ const JogosPage = (props) => {
             .catch(() => {
                 console.log("Não funcionou")
             })
-        }, [])
+             
+   }, [])
+
+   const adicionarCarrinho = () => {
+        axios.post("https://gamepointstore.onrender.com/carrinho", {
+            nome_jogo: jogos.nome,
+            descricao: jogos.descricao,
+            preco: jogos.preco,
+            avaliacao: jogos.avaliacao,
+            imagem: jogos.imagem
+        })
+        .then((response) => {
+            console.log("Deu certo o post")
+            setAdcionado("Adicionado")
+        })
+        .catch((error) => {
+            console.log("Deu tudo errado o post")
+        })
+   }
 
     return(
         <div >
@@ -51,7 +72,7 @@ const JogosPage = (props) => {
                <div className="informacoes-jogo">
                     <h1 className="nome-jogo">{jogos.nome}</h1>
                     <div className="genero-avaliacao">
-                        <h3>Terror</h3>
+                        <h3>{genero}</h3>
                         <div className="avaliacao">
                             <img src={Estrela} alt="" />
                             <img src={Estrela} alt="" />
@@ -69,25 +90,19 @@ const JogosPage = (props) => {
                             <p>12x no cartão</p>
                         </div>
                         <div>
-                            <button>Comprar</button>
-                            <button>
+                            <a href="/compra-realizada">
+                                <button>Comprar</button>
+                            </a>
+                            
+                            <button onClick={adicionarCarrinho}>
                                 <img className="carrinho" src={Carrinho} alt="" /> 
-                                Carrinho
+                                {adicionado}
                             </button>
+                    
                         </div> 
                     </div>
                </div>
             </div>
-
-            <div className="capturas-tela">
-                <h1>Capturas de Tela</h1>
-                <div className="imagens-captura-tela">
-                    <img src="https://s2.glbimg.com/uVgESZRf29Bv_sS98o6mzzNP9bM=/0x0:1200x765/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/A/D/x9GxjjRWqLxrhSbWFuNA/residentevil7-3.jpg" alt="" />
-
-                    <img src="https://4.bp.blogspot.com/-ZzBxMroQj2g/WI-Q-HI9MYI/AAAAAAAAMfM/FcmTtBeqY9sulKQDd3Lw97wG022U7FpygCLcB/s1600/resident-evil-7-video.jpg" alt="" />
-                </div>
-            </div>
-           
         </div>
     )
 }

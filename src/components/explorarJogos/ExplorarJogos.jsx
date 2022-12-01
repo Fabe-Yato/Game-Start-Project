@@ -1,6 +1,6 @@
-import "../explorarJogos.css"
-import RE7 from "../assets/resident-evil-7.jpg"
-import Navbar from "./Home/Navbar"
+import "./explorarJogos.css"
+import RE7 from "../../assets/resident-evil-7.jpg"
+import Navbar from "../Home/Navbar"
 
 const ExplorarJogos = () => {
     return(

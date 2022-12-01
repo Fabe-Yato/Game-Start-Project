@@ -20,12 +20,12 @@ const Generos = () => {
    useEffect(() => {
         axios.get("https://gamepointstore.onrender.com/genero")
         .then(( response ) => { 
-            setTerror(response.data[0])  
-            setAcao(response.data[1])
-            setFPS(response.data[2])  
-            setAventura(response.data[3])
-            setGratis(response.data[4])
-            setPlataforma(response.data[5])  
+            setAcao(response.data[0])  
+            setAventura(response.data[1])
+            setTerror(response.data[2])  
+            setFPS(response.data[3])
+            setPlataforma(response.data[4])
+            setGratis(response.data[5])  
         })
         .catch(() => {
             console.log("Não funcionou")
